@@ -2,17 +2,17 @@
 
 This project is a standard token contract developed on the Soroban platform. Soroban is a smart contract platform that runs on the Stellar blockchain.
 
---Skipping install because wasm already installed
---Using wasm hash 906c93394fae9e56114d45e4603fac33bd385099fb5e5be02f14eba40c228fb6
---Simulating deploy transaction…
---Transaction hash is e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
---https://stellar.expert/explorer/testnet/tx/e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
---Signing transaction: e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
---Submitting deploy transaction…
---https://stellar.expert/explorer/testnet/contract/CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
---Deployed!
+- Skipping install because wasm already installed
+- Using wasm hash 906c93394fae9e56114d45e4603fac33bd385099fb5e5be02f14eba40c228fb6
+- Simulating deploy transaction…
+- Transaction hash is e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
+- https://stellar.expert/explorer/testnet/tx/e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
+- Signing transaction: e2d96061e5b5d59023351edbb7ca9cca3178c64f329e15a7ebd1e91b32352aac
+- Submitting deploy transaction…
+- https://stellar.expert/explorer/testnet/contract/CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
+- Deployed!
 
-CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
+- CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
 
 ## Project Overview
 
