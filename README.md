@@ -11,7 +11,7 @@ This project is a standard token contract developed on the Soroban platform. Sor
 - Submitting deploy transaction…
 - https://stellar.expert/explorer/testnet/contract/CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
 - Deployed!
-
+ ## Contract Address 
 - CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
 
 ## Project Overview
@@ -57,7 +57,8 @@ The contract is written in Rust programming language and compiled without standa
 #### Admin Operations
 - `initialize`: Initialize the contract
 - `set_admin`: Change the administrator address
-
+- `freeze_account`: Freeze an account to restrict token transfers
+- `unfreeze_account`: Unfreeze an account to allow token transfers
 ## Contact
 
 For questions or contributions, please open an issue or submit a pull request.
