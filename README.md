@@ -59,6 +59,9 @@ The contract is written in Rust programming language and compiled without standa
 - `set_admin`: Change the administrator address
 - `freeze_account`: Freeze an account to restrict token transfers
 - `unfreeze_account`: Unfreeze an account to allow token transfers
+- `Vesting`: Token vesting contract provides for the gradual release of tokens over a specified timeline
+- `Stake`:Staking contract allows users to earn rewards by locking tokens
 ## Contact
-
+- `Vesting`: Token vesting contract provides for the gradual release of tokens over a specified timeline
+- `Stake`:Staking contract allows users to earn rewards by locking tokens
 For questions or contributions, please open an issue or submit a pull request.
