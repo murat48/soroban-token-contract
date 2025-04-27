@@ -1,3 +1,102 @@
+# TokenNexus
+
+-Project Visual
+
+## About Me
+
+My name is Murat Keskin. I graduated from Kyiv Polytechnic University in 2015 with a degree in Business Administration and later from Anadolu University in 2025 with a degree in Computer Programming. I started investing in crypto in 2024, which sparked my interest in web3 technologies. Six months ago, I wrote my first code for the Internet Computer Protocol (ICP) and have been building ever since. I’m passionate about gaming, travel, and creating new opportunities through blockchain technology.
+
+## Description
+
+TokenNexus is a powerful token ecosystem built on the Scroll blockchain using Soroban smart contracts. It goes beyond basic token features to offer a complete financial system with strong security. Key features include secure token transfers, burning, approvals, and a flexible vesting system with cliffs and claims. It also offers customizable staking with adjustable rewards and lock periods. For extra safety, TokenNexus allows account freezing and strict authorization checks. Admins can manage settings and activate emergency functions when needed. Developed in Rust with Soroban SDK, it ensures efficient storage and full event tracking. TokenNexus is perfect for token projects, DeFi apps, and institutions needing a secure, flexible token solution with advanced distribution and reward tools.
+
+## Vision
+
+At TokenNexus, we aim to build the future of token infrastructure on the Stellar ecosystem. Our vision is to empower users and institutions with secure, transparent, and flexible tools that make complex finance simple. By combining enterprise-level security with easy-to-use features, we encourage long-term participation and help grow the Stellar network. TokenNexus bridges traditional and crypto finance, giving more people access to powerful financial tools. We strive to set a new industry standard by uniting the best practices of blockchain into one strong, smart token system for the future.
+
+## Project RoadMap / Future Plans
+
+1. Smart Contract Architecture Design
+
+Define key modules: Token Operations, Vesting, Staking, Admin Controls.
+Design data structures: user balances, vesting schedules, staking pools, frozen accounts.
+Outline events: transfers, staking updates, vesting claims, account freezes.
+
+2. Core Smart Contract Development (Rust + Soroban SDK)
+
+Implement token functions: `transfer`, `burn`, `approve`, `freeze_account`, `unfreeze_account`.
+Build vesting system: `create_vesting`, `claim_vested_tokens`, `check_vesting_schedule`.
+Develop staking mechanism: `stake_tokens`, `unstake_tokens`, `calculate_rewards`.
+Add admin features: `update_parameters`, `trigger_emergency`, `authorization checks`.
+
+3. Smart Contract Testing & Security Review
+
+Write unit tests for each function using Soroban's testing framework.
+Perform security audits: validate authorization, emergency scenarios, storage management.
+
+4. Front-End Interface Development
+
+Build a responsive web app with user dashboards for token management, staking, vesting claims.
+Integrate smart contract interaction (e.g., using Soroban.js or Web3 library).
+Implement wallet connection, transaction signing, and event notifications.
+
+5. Final System Testing (Integration + User Testing)
+
+Connect front-end to smart contracts in a testnet environment.
+Run full workflow tests: minting, transferring, staking, vesting, freezing.
+Collect feedback and fine-tune UX/UI.
+
+6. Deployment to Scroll Mainnet
+
+Deploy smart contracts after final audit.
+Launch front-end with mainnet connection.
+Prepare documentation and community launch materials.
+
+## Programming Language
+
+Rust & Web3
+
+ ## Contract Address 
+ 
+- CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
+
+## Setup Enviroment
+
+Prerequisites
+
+Rust (recommended version 1.70+)
+Soroban CLI
+Stellar Account with testnet funds
+
+### Installation
+
+ #### Install Rust (if not already installed)
+- `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
+ #### Clone the repository
+ - `git clone https://github.com/murat48/stellar-token-contract.git`
+
+ #### Add Wasm target for Rust
+- `rustup target add wasm32-unknown-unknown`
+
+ #### Install Soroban CLI
+ - `cargo install --locked soroban-cli`
+
+#### Build the contract
+ - `cargo build --target wasm32-unknown-unknown --release`
+ 
+# Deployment
+
+ `stellar keys generate --global alice --network testnet --fund (This you will be generate global Secret Key) `
+ `stellar keys address alice (This you will be show your secret key address) `
+
+# Deploy the contract
+   `contract deploy \
+  --wasm target/wasm32-unknown-unknown/release/stellar_token_contract.wasm \
+  --source alice \
+  --network testnet `
+This will output a contract ID that you should save for interacting with the contract.
+
 # Soroban Token Contract
 
 This project is a standard token contract developed on the Soroban platform. Soroban is a smart contract platform that runs on the Stellar blockchain.
@@ -11,57 +110,4 @@ This project is a standard token contract developed on the Soroban platform. Sor
 - Submitting deploy transaction…
 - https://stellar.expert/explorer/testnet/contract/CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
 - Deployed!
- ## Contract Address 
-- CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
-
-## Project Overview
-
-Soroban Token Contract is a comprehensive smart contract offering basic token functionalities. With this contract, you can perform standard token operations such as creating, transferring, burning tokens, and authorizing third-party spending.
-
-## Features
-
-- **Token Management**: Mint, burn, and transfer operations
-- **Authorization**: Allowance mechanism for third-party spending
-- **Admin Control**: Setting admin and operations requiring administrator permission
-- **Metadata**: Token name, symbol, and decimal information
-
-## Contract Structure
-
-The project consists of the following modules:
-
-- **admin**: Administrator functions and authorization
-- **allowance**: Token spending permission management
-- **balance**: Balance management operations
-- **contract**: Main contract implementation and token interface
-- **metadata**: Token metadata (name, symbol, decimals)
-- **storage_types**: Storage data structures
-
-## Technical Details
-
-The contract is written in Rust programming language and compiled without standard library dependencies using the `#![no_std]` directive. This approach ensures that the contract is smaller in size and operates more efficiently.
-
-### Key Functions
-
-#### Token Management
-- `mint`: Create new tokens (admin only)
-- `burn`: Burn tokens
-- `transfer`: Transfer tokens
-- `balance`: View address balance
-
-#### Allowance Management
-- `approve`: Grant spending permission to another address
-- `allowance`: View granted permission amount
-- `transfer_from`: Transfer tokens with permission
-- `burn_from`: Burn tokens with permission
-
-#### Admin Operations
-- `initialize`: Initialize the contract
-- `set_admin`: Change the administrator address
-- `freeze_account`: Freeze an account to restrict token transfers
-- `unfreeze_account`: Unfreeze an account to allow token transfers
-- `Vesting`: Token vesting contract provides for the gradual release of tokens over a specified timeline
-- `Stake`:Staking contract allows users to earn rewards by locking tokens
-## Contact
-- `Vesting`: Token vesting contract provides for the gradual release of tokens over a specified timeline
-- `Stake`:Staking contract allows users to earn rewards by locking tokens
-For questions or contributions, please open an issue or submit a pull request.
+CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
