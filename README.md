@@ -1,6 +1,6 @@
 # TokenNexus
 
--Project Visual
+<img src="/mr.png" alt="Profil Resmi" width="200"/>
 
 ## About Me
 
@@ -87,8 +87,8 @@ Stellar Account with testnet funds
  
 # Deployment
 
- `stellar keys generate --global alice --network testnet --fund (This you will be generate global Secret Key) `
- `stellar keys address alice (This you will be show your secret key address) `
+ - `stellar keys generate --global alice --network testnet --fund (This you will be generate global Secret Key) `
+ - `stellar keys address alice (This you will be show your secret key address) `
 
 # Deploy the contract
    `contract deploy \
@@ -111,3 +111,5 @@ This project is a standard token contract developed on the Soroban platform. Sor
 - https://stellar.expert/explorer/testnet/contract/CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
 - Deployed!
 CDRPGQHJMHSLTXRN44KYLAGCOBH7GU4DLDIN5BPF7FZFWPYWAXH66ZDJ
+  # Result
+  <img src="/contract.png" alt="Profil Resmi" width="400"/>
