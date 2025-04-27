@@ -87,7 +87,7 @@ Stellar Account with testnet funds
 
 #### Ledger
  - sudo apt install jq --- $(curl -s "https://horizon-testnet.stellar.org/" | jq '.core_latest_ledger')
- - 
+   
 # Deployment
 
  - `stellar keys generate --global alice --network testnet --fund (This you will be generate global Secret Key) `
