@@ -84,7 +84,10 @@ Stellar Account with testnet funds
 
 #### Build the contract
  - `cargo build --target wasm32-unknown-unknown --release`
- 
+
+#### Ledger
+ - sudo apt install jq --- $(curl -s "https://horizon-testnet.stellar.org/" | jq '.core_latest_ledger')
+ - 
 # Deployment
 
  - `stellar keys generate --global alice --network testnet --fund (This you will be generate global Secret Key) `
@@ -97,6 +100,60 @@ Stellar Account with testnet funds
   --network testnet `
 This will output a contract ID that you should save for interacting with the contract.
 
+# Usage
+#### Initialize Token
+
+- ` soroban contract invoke \
+  --id <CONTRACT_ID> \
+  --source admin \
+  --network testnet \
+  -- \
+  initialize \
+  --admin <ADMIN_ADDRESS> \
+  --decimal 7 \
+  --name "MyToken" \
+  --symbol "MRT" `
+  
+#### Mint
+
+- `soroban contract invoke \
+  --id <CONTRACT_ID> \
+  --source-account admin \
+  --network testnet \
+  -- \
+  mint \
+  --to <ADMIN_ADDRESS> \
+  --amount 1000000000000000`
+  
+#### Create Vesting
+
+- ` soroban contract invoke \
+  --id <CONTRACT_ID> \
+  --source admin \
+  --network testnet \
+  -- \
+  create_vesting \
+  --beneficiary ADDRESS \
+  --amount 10000000 \
+  --start_ledger $(curl -s "https://horizon-testnet.stellar.org/" | jq '.core_latest_ledger') \
+  --cliff_ledger $(curl -s "https://horizon-testnet.stellar.org/" | jq '.core_latest_ledger + 17280') \
+  --end_ledger $(curl -s "https://horizon-testnet.stellar.org/" | jq '.core_latest_ledger + 518400') `
+
+  #### initialize staking
+ 
+- ` soroban contract invoke \
+  --id <CONTRACT_ID> \
+  --source admin \
+  --network testnet \
+  -- \
+  initialize_staking \
+  --admin ADDRESS \
+  --token_id <CONTRACT_ID2>  \
+  --reward_token_id <CONTRACT_ID2>  \
+  --reward_rate 100 \
+  --min_stake_duration 17280 `
+
+`
 # Soroban Token Contract
 
 This project is a standard token contract developed on the Soroban platform. Soroban is a smart contract platform that runs on the Stellar blockchain.
